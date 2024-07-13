@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>EcsBenchmark-20240713-123738</title>
+<title>EcsBenchmark-20240713-145117</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -13,23 +13,32 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3880/23H2/2023Update/SunValley3)
+BenchmarkDotNet=v0.13.5, OS=Windows 11 (10.0.22631.3880)
 AMD Ryzen 9 5950X, 1 CPU, 32 logical and 16 physical cores
-.NET SDK 8.0.300
-  [Host]     : .NET 8.0.5 (8.0.524.21615), X64 AOT AVX2
-  DefaultJob : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX2
+.NET SDK=7.0.306
+  [Host]     : .NET 7.0.9 (7.0.923.32018), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.9 (7.0.923.32018), X64 RyuJIT AVX2
 </code></pre>
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method       </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Allocated</th>
+<thead><tr><th>      Method</th><th>Type</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>BranchInstructions/Op</th><th>CacheMisses/Op</th><th>BranchMispredictions/Op</th><th>Gen0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>AoSUpdatePositions</td><td>106.827 &mu;s</td><td>0.7466 &mu;s</td><td>0.6984 &mu;s</td><td>-</td>
-</tr><tr><td>SoAUpdatePositions</td><td>101.476 &mu;s</td><td>0.7044 &mu;s</td><td>0.6589 &mu;s</td><td>-</td>
-</tr><tr><td>SoA2UpdatePositions</td><td>10.837 &mu;s</td><td>0.1048 &mu;s</td><td>0.0980 &mu;s</td><td>-</td>
-</tr><tr><td>AoSDamageEntities</td><td>66.783 &mu;s</td><td>0.7213 &mu;s</td><td>0.6395 &mu;s</td><td>-</td>
-</tr><tr><td>SoADamageEntities</td><td>65.461 &mu;s</td><td>0.6747 &mu;s</td><td>0.6311 &mu;s</td><td>-</td>
-</tr><tr><td>SoA2DamageEntities</td><td>6.481 &mu;s</td><td>0.0747 &mu;s</td><td>0.0699 &mu;s</td><td>-</td>
+</thead><tbody><tr><td>UpdatePositions</td><td>SoA</td><td>1,637.55 &mu;s</td><td>20.550 &mu;s</td><td>19.223 &mu;s</td><td>1,635.93 &mu;s</td><td>4,941,427</td><td>25,020</td><td>1,965</td><td>-</td><td>1 B</td>
+</tr><tr><td>ApplyGlobalDamage</td><td>SoA</td><td>779.73 &mu;s</td><td>9.531 &mu;s</td><td>8.916 &mu;s</td><td>780.04 &mu;s</td><td>4,847,162</td><td>11,544</td><td>1,732</td><td>-</td><td>1 B</td>
+</tr><tr><td>ScaleEntities</td><td>SoA</td><td>896.70 &mu;s</td><td>17.670 &mu;s</td><td>17.354 &mu;s</td><td>891.94 &mu;s</td><td>3,895,213</td><td>10,986</td><td>1,450</td><td>-</td><td>1 B</td>
+</tr><tr><td>CountAliveEntities</td><td>SoA</td><td>649.60 &mu;s</td><td>5.947 &mu;s</td><td>5.563 &mu;s</td><td>647.95 &mu;s</td><td>4,806,812</td><td>11,459</td><td>1,629</td><td>-</td><td>1 B</td>
+</tr><tr><td>ResetDamage</td><td>SoA</td><td>421.62 &mu;s</td><td>2.844 &mu;s</td><td>2.375 &mu;s</td><td>420.71 &mu;s</td><td>1,955,648</td><td>6,041</td><td>700</td><td>-</td><td>-</td>
+</tr><tr><td>UpdatePositions</td><td>AoS</td><td>2,317.84 &mu;s</td><td>46.297 &mu;s</td><td>127.514 &mu;s</td><td>2,273.33 &mu;s</td><td>3,993,261</td><td>43,695</td><td>1,939</td><td>-</td><td>2 B</td>
+</tr><tr><td>ApplyGlobalDamage</td><td>AoS</td><td>2,043.16 &mu;s</td><td>40.799 &mu;s</td><td>113.730 &mu;s</td><td>1,988.61 &mu;s</td><td>4,960,033</td><td>48,396</td><td>2,173</td><td>-</td><td>2 B</td>
+</tr><tr><td>ScaleEntities</td><td>AoS</td><td>1,973.72 &mu;s</td><td>42.950 &mu;s</td><td>126.638 &mu;s</td><td>1,902.77 &mu;s</td><td>3,983,872</td><td>43,378</td><td>1,847</td><td>-</td><td>2 B</td>
+</tr><tr><td>CountAliveEntities</td><td>AoS</td><td>1,599.33 &mu;s</td><td>31.977 &mu;s</td><td>43.770 &mu;s</td><td>1,581.46 &mu;s</td><td>4,940,983</td><td>46,851</td><td>2,097</td><td>-</td><td>1 B</td>
+</tr><tr><td>ResetDamage</td><td>AoS</td><td>423.12 &mu;s</td><td>4.443 &mu;s</td><td>4.156 &mu;s</td><td>420.64 &mu;s</td><td>1,955,746</td><td>5,215</td><td>702</td><td>-</td><td>-</td>
+</tr><tr><td>UpdatePositions</td><td>SIMD_SoA</td><td>189.62 &mu;s</td><td>3.689 &mu;s</td><td>3.788 &mu;s</td><td>189.51 &mu;s</td><td>1,138,385</td><td>212,693</td><td>10,432</td><td>0.4883</td><td>8607 B</td>
+</tr><tr><td>ApplyGlobalDamage</td><td>SIMD_SoA</td><td>157.54 &mu;s</td><td>2.846 &mu;s</td><td>2.662 &mu;s</td><td>157.56 &mu;s</td><td>1,123,061</td><td>122,268</td><td>8,866</td><td>0.4883</td><td>9301 B</td>
+</tr><tr><td>ScaleEntities</td><td>SIMD_SoA</td><td>158.97 &mu;s</td><td>2.991 &mu;s</td><td>2.938 &mu;s</td><td>158.87 &mu;s</td><td>1,121,012</td><td>124,985</td><td>9,608</td><td>0.4883</td><td>8438 B</td>
+</tr><tr><td>CountAliveEntities</td><td>SIMD_SoA</td><td>83.29 &mu;s</td><td>1.855 &mu;s</td><td>5.441 &mu;s</td><td>81.55 &mu;s</td><td>976,616</td><td>125,354</td><td>7,363</td><td>0.4883</td><td>9398 B</td>
+</tr><tr><td>ResetDamage</td><td>SIMD_SoA</td><td>51.11 &mu;s</td><td>0.485 &mu;s</td><td>0.405 &mu;s</td><td>51.02 &mu;s</td><td>206,560</td><td>13,435</td><td>3,270</td><td>0.4883</td><td>8307 B</td>
 </tr></tbody></table>
 </body>
 </html>
