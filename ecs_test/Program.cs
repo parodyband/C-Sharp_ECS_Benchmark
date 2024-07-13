@@ -1,14 +1,15 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Diagnostics.Windows.Configs;
 using BenchmarkDotNet.Running;
-using System;
 using BenchmarkDotNet.Diagnosers;
 
+[MemoryDiagnoser]
+[EtwProfiler]
 [HardwareCounters(
 	HardwareCounter.CacheMisses,
 	HardwareCounter.BranchMispredictions,
 	HardwareCounter.BranchInstructions
 )]
-[MemoryDiagnoser]
 public class EcsBenchmark
 {
 	private const int EntityCount = 100000;
@@ -42,7 +43,7 @@ public class EcsBenchmark
 	{
 		m_SoaProgram.UpdatePositions();
 	}
-	
+    
 	[Benchmark]
 	public void SoA2UpdatePositions()
 	{
@@ -60,7 +61,7 @@ public class EcsBenchmark
 	{
 		m_SoaProgram.DamageEntities(1000);
 	}
-	
+    
 	[Benchmark]
 	public void SoA2DamageEntities()
 	{

@@ -3,3 +3,14 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+ecs_test/BenchmarkDotNet.Artifacts/EcsBenchmark.SoA2DamageEntities-20240713-125032.etl
+ecs_test/BenchmarkDotNet.Artifacts/EcsBenchmark.SoADamageEntities-20240713-125032.etl
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report-github.md
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.csv
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.html
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report-github.md
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.csv
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.html
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report-github.md
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.csv
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.html
