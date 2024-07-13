@@ -1,6 +1,6 @@
 ﻿public class AoSProgram
 {
-	private const int MaxEntities = 100000;
+	private const int MaxEntities = 1000000;
 
 	private struct Position
 	{

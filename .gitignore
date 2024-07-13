@@ -14,3 +14,10 @@ ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.html
 ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report-github.md
 ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.csv
 ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.html
+*.etl
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report-github.md
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.csv
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.html
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report-github.md
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.csv
+ecs_test/BenchmarkDotNet.Artifacts/results/EcsBenchmark-report.html

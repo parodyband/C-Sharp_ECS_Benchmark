@@ -12,7 +12,7 @@ using BenchmarkDotNet.Diagnosers;
 )]
 public class EcsBenchmark
 {
-	private const int EntityCount = 100000;
+	private const int EntityCount = 1000000;
 	private AoSProgram m_AosProgram;
 	private SoAProgram m_SoaProgram;
 	private SoA2Program m_Soa2Program;
