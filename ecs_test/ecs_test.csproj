@@ -13,4 +13,8 @@
         <PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.13.5" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="BenchmarkDotNet.Artifacts\results\" />
+    </ItemGroup>
+
 </Project>

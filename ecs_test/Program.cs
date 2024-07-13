@@ -52,17 +52,17 @@ public class EcsBenchmark
 	[Benchmark]
 	public void UpdatePositions() => Ecs.UpdatePositions(0.016f);
 
-	[Benchmark]
-	public void ApplyGlobalDamage() => Ecs.ApplyGlobalDamage(5);
-
-	[Benchmark]
-	public void ScaleEntities() => Ecs.ScaleEntities(1.1f);
-
-	[Benchmark]
-	public int CountAliveEntities() => Ecs.CountAliveEntities();
-
-	[Benchmark]
-	public void ResetDamage() => Ecs.ResetDamage();
+	// [Benchmark]
+	// public void ApplyGlobalDamage() => Ecs.ApplyGlobalDamage(5);
+	//
+	// [Benchmark]
+	// public void ScaleEntities() => Ecs.ScaleEntities(1.1f);
+	//
+	// [Benchmark]
+	// public int CountAliveEntities() => Ecs.CountAliveEntities();
+	//
+	// [Benchmark]
+	// public void ResetDamage() => Ecs.ResetDamage();
 }
 
 public class Program
